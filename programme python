@@ -1,0 +1,13 @@
+import itertools
+
+def fonction_logique(x, y):
+    return x and y  # Fonction logique AND
+
+def table_verite():
+    valeurs = [list(x) for x in itertools.product([0, 1], repeat=2)]
+    print('x', 'y', 'Résultat', sep='\t')
+    for valeur in valeurs:
+        resultat = fonction_logique(*valeur)
+        print(*valeur, resultat, sep='\t')
+
+table_verite()
